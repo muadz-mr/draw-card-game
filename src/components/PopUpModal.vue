@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="ended" max-width="480" persistent>
-    <v-card>
-      <v-card-title class="text-h5">
+    <v-card class="text-center">
+      <v-card-title class="text-h5 justify-center">
         <slot name="title" />
       </v-card-title>
 
@@ -9,17 +9,15 @@
         <slot name="body" />
       </v-card-text>
 
-      <v-card-actions>
-        <v-spacer></v-spacer>
-
+      <v-card-actions class="justify-center">
+        <v-btn color="primary" class="px-4" @click="rematch">Rematch</v-btn>
         <v-btn
-          color="secondary darken-1"
+          color="secondary"
+          class="px-4"
           text
           @click="$store.commit('setGameEnded', false)"
           >Stop playing</v-btn
         >
-
-        <v-btn color="green darken-1" @click="rematch">Rematch</v-btn>
       </v-card-actions>
     </v-card>
   </v-dialog>
