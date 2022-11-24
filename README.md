@@ -1,5 +1,8 @@
 # draw-it-game
 
+## Requirements
+- Node v16.17.0 or above
+
 ## Project setup
 ```
 npm install
